@@ -303,6 +303,17 @@ class User extends AbstractModel
 
         return $value;
     }
+    
+    /**
+     * Get the path of the user's avatar.
+     *
+     * @todo Allow different storage locations to be used
+     * @return string
+     */
+    public function getaAvatarPathAttribute()
+    {
+        return $this->attributes['avatar_url'];
+    }
 
     /**
      * Get the user's display name.
